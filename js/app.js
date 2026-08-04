@@ -1,10 +1,10 @@
 let comments = JSON.parse(localStorage.getItem('tsubasa_comments') || '[]');
 
 const defaultComments = [
-    { name: 'عاشق تسوباسا', text: 'تسوباسا ملك اللعبة! تسديداته تتجاوز 10K! 🔥⚽', time: 'منذ ساعة', likes: 24, liked: false },
-    { name: 'محلل الألعاب', text: 'هيوغا أقوى في القوة البدنية لكن تسوباسا أكثر توازناً.', time: 'منذ 3 ساعات', likes: 18, liked: false },
-    { name: 'Captain Pro', text: 'الحراس عندهم دفاع فوق 10K يعني ما تقدر تتغدى عليه! 🧤', time: 'منذ 5 ساعات', likes: 32, liked: false },
-    { name: 'Tsubasa_Fan', text: 'غينزو وحش! دفاعه 10345 🔥', time: 'منذ يوم', likes: 45, liked: false }
+    { name: 'TsubasaFan', text: 'Tsubasa Dreamfest is the best version! His Drive Tiger Shot is unstoppable! 🔥', time: '1 hour ago', likes: 24, liked: false },
+    { name: 'GameAnalyst', text: 'Hyuga has higher kick power but Tsubasa is more balanced overall. Both are top tier.', time: '3 hours ago', likes: 18, liked: false },
+    { name: 'CaptainPro', text: 'Use both in your team! Hyuga as pure striker, Tsubasa as playmaker 🎯', time: '5 hours ago', likes: 32, liked: false },
+    { name: 'TsubasaLover', text: 'Genzo Dream is the best GK ever! His defense stat is over 10K! 🧤👑', time: '1 day ago', likes: 45, liked: false }
 ];
 
 if (comments.length === 0) {
@@ -26,16 +26,15 @@ function initDropdowns() {
     const sorted = Object.entries(playersData).sort((a, b) => b[1].rating - a[1].rating);
     
     sorted.forEach(([key, p]) => {
-        select1.add(new Option(`${p.image} ${p.name} (${p.posLabel})`, key));
-        select2.add(new Option(`${p.image} ${p.name} (${p.posLabel})`, key));
+        select1.add(new Option(`${p.image} ${p.name} - ${p.version}`, key));
+        select2.add(new Option(`${p.image} ${p.name} - ${p.version}`, key));
     });
     
-    select1.value = 'tsubasa';
-    select2.value = 'hyuga';
+    select1.value = 'tsubasa_dream_dc';
+    select2.value = 'hyuga_dream_dc';
     updateAll();
 }
 
-// ============= حساب النسبة المئوية من الحد الأقصى =============
 function calcPercent(value) {
     return (value / maxStat) * 100;
 }
@@ -53,7 +52,8 @@ function renderPlayerCard(playerKey, cardNum) {
             <div class="player-info">
                 <span class="player-rarity rarity-${p.color}">⭐ ${p.rarity}</span>
                 <h2 class="player-name">${p.name}</h2>
-                <p class="player-jp">${p.jp}</p>
+                <p class="player-version">${p.version}</p>
+                <p class="player-jp">${p.jp || ''}</p>
                 <span class="player-position">${p.posLabel}</span>
                 <p class="player-team">${p.team}</p>
             </div>
@@ -62,7 +62,7 @@ function renderPlayerCard(playerKey, cardNum) {
         <div class="rating-section">
             <div class="stars">${stars}</div>
             <div class="rating-number">${p.rating} / 5.0</div>
-            <div class="rating-count">📊 ${p.votes.toLocaleString()} تقييم</div>
+            <div class="rating-count">📊 ${p.votes.toLocaleString()} votes</div>
         </div>
         <div class="stats-section">
     `;
@@ -85,11 +85,11 @@ function renderPlayerCard(playerKey, cardNum) {
     html += `
         </div>
         <div class="total-power">
-            <div class="power-label">القوة الإجمالية</div>
+            <div class="power-label">TOTAL POWER</div>
             <div class="power-value">${totalPower.toLocaleString()}</div>
         </div>
         <div class="skills-section">
-            <div class="skills-title">🌟 المهارات الخاصة</div>
+            <div class="skills-title">🌟 SPECIAL SKILLS</div>
     `;
     
     p.skills.forEach(skill => {
@@ -142,7 +142,6 @@ function drawRadarChart() {
         html += `<text x="${labelX}" y="${labelY + 12}" fill="#8a9bb5" font-size="8" text-anchor="middle" dominant-baseline="middle">${statNames[stat]}</text>`;
     });
     
-    // Player 1 - يستخدم النسبة الحقيقية
     let p1Points = '';
     stats.forEach((stat, i) => {
         const angle = (angleStep * i) - Math.PI / 2;
@@ -161,7 +160,6 @@ function drawRadarChart() {
         html += `<circle cx="${x}" cy="${y}" r="4" fill="#00d4ff"/>`;
     });
     
-    // Player 2
     let p2Points = '';
     stats.forEach((stat, i) => {
         const angle = (angleStep * i) - Math.PI / 2;
@@ -181,8 +179,8 @@ function drawRadarChart() {
     });
     
     svg.innerHTML = html;
-    document.getElementById('legendName1').textContent = p1.name;
-    document.getElementById('legendName2').textContent = p2.name;
+    document.getElementById('legendName1').textContent = `${p1.name} (${p.version.split(' - ')[0]})`;
+    document.getElementById('legendName2').textContent = `${p2.name} (${p.version.split(' - ')[0]})`;
 }
 
 function checkWinner() {
@@ -210,22 +208,22 @@ function checkWinner() {
     if (p1Wins > p2Wins) {
         winnerSection.innerHTML = `
             <div class="winner-trophy">🏆</div>
-            <div class="winner-text">⭐ الفائز في المقارنة ⭐</div>
+            <div class="winner-text">⭐ WINNER ⭐</div>
             <div class="winner-name">${p1.name}</div>
-            <p class="winner-reason">تفوق في ${p1Wins} من 7 مهارات | ${wonStats.join('، ')}</p>
+            <p class="winner-reason">${p1.version} | Won ${p1Wins}/7 stats: ${wonStats.join(', ')}</p>
         `;
     } else if (p2Wins > p1Wins) {
         winnerSection.innerHTML = `
             <div class="winner-trophy">🏆</div>
-            <div class="winner-text">⭐ الفائز في المقارنة ⭐</div>
+            <div class="winner-text">⭐ WINNER ⭐</div>
             <div class="winner-name">${p2.name}</div>
-            <p class="winner-reason">تفوق في ${p2Wins} من 7 مهارات</p>
+            <p class="winner-reason">${p2.version} | Won ${p2Wins}/7 stats</p>
         `;
     } else {
         winnerSection.innerHTML = `
             <div class="winner-trophy">🤝</div>
-            <div class="winner-text" style="color: #ccc;">تعادل مثير!</div>
-            <p class="winner-reason">كلا اللاعبين متساويان (${p1Wins} - ${p2Wins})</p>
+            <div class="winner-text" style="color: #ccc;">DRAW!</div>
+            <p class="winner-reason">Both players are equal (${p1Wins} - ${p2Wins})</p>
         `;
     }
 }
@@ -241,7 +239,6 @@ function updateAll() {
     drawRadarChart();
     checkWinner();
     
-    // تأثير حركي للأشرطة
     setTimeout(() => {
         document.querySelectorAll('.stat-fill').forEach(fill => {
             const w = fill.dataset.width;
@@ -266,23 +263,23 @@ function renderComments() {
                 <button class="comment-action ${c.liked ? 'liked' : ''}" onclick="likeComment(${i})">
                     ${c.liked ? '❤️' : '🤍'} ${c.likes}
                 </button>
-                <button class="comment-action">💬 رد</button>
-                <button class="comment-action">🔗 مشاركة</button>
+                <button class="comment-action">💬 Reply</button>
+                <button class="comment-action">🔗 Share</button>
             </div>
         </div>
     `).join('');
 }
 
 function addComment() {
-    const name = document.getElementById('userName').value.trim() || 'مستخدم مجهول';
+    const name = document.getElementById('userName').value.trim() || 'Anonymous';
     const text = document.getElementById('commentText').value.trim();
     
     if (!text) {
-        alert('الرجاء كتابة تعليق');
+        alert('Please write a comment');
         return;
     }
     
-    comments.unshift({ name, text, time: 'الآن', likes: 0, liked: false });
+    comments.unshift({ name, text, time: 'Just now', likes: 0, liked: false });
     localStorage.setItem('tsubasa_comments', JSON.stringify(comments));
     document.getElementById('commentText').value = '';
     document.getElementById('userName').value = '';
@@ -306,11 +303,16 @@ function renderPlayersList() {
         <div class="mini-player-card" data-key="${key}">
             <div class="mini-player-avatar">${p.image}</div>
             <div class="mini-player-name">${p.name}</div>
+            <div class="mini-player-version">${p.version.split(' - ')[0]}</div>
             <span class="mini-player-rarity rarity-${p.color}">⭐ ${p.rarity}</span>
-            <div style="color: #ffd700; font-size: 12px; margin-top: 5px;">${p.rating} ★</div>
+            <div style="color: #ffd700; font-size: 11px; margin-top: 4px;">${p.rating} ★</div>
         </div>
     `).join('');
     
+    attachCardListeners();
+}
+
+function attachCardListeners() {
     document.querySelectorAll('.mini-player-card').forEach(card => {
         card.addEventListener('click', () => {
             const key = card.dataset.key;
@@ -330,7 +332,7 @@ function filterPlayers() {
     
     const filtered = Object.entries(playersData).filter(([key, p]) => {
         const matchSearch = p.name.toLowerCase().includes(search) || 
-                           p.jp.toLowerCase().includes(search) ||
+                           p.version.toLowerCase().includes(search) ||
                            p.team.toLowerCase().includes(search) ||
                            p.posLabel.toLowerCase().includes(search);
         const matchFilter = activeFilter === 'all' || p.position === activeFilter;
@@ -339,7 +341,7 @@ function filterPlayers() {
     
     const grid = document.getElementById('allPlayersGrid');
     if (filtered.length === 0) {
-        grid.innerHTML = '<p style="color: #8a9bb5; grid-column: 1/-1; text-align: center; padding: 30px;">لا توجد نتائج</p>';
+        grid.innerHTML = '<p style="color: #8a9bb5; grid-column: 1/-1; text-align: center; padding: 30px;">No results found</p>';
         return;
     }
     
@@ -347,22 +349,13 @@ function filterPlayers() {
         <div class="mini-player-card" data-key="${key}">
             <div class="mini-player-avatar">${p.image}</div>
             <div class="mini-player-name">${p.name}</div>
+            <div class="mini-player-version">${p.version.split(' - ')[0]}</div>
             <span class="mini-player-rarity rarity-${p.color}">⭐ ${p.rarity}</span>
-            <div style="color: #ffd700; font-size: 12px; margin-top: 5px;">${p.rating} ★</div>
+            <div style="color: #ffd700; font-size: 11px; margin-top: 4px;">${p.rating} ★</div>
         </div>
     `).join('');
     
-    document.querySelectorAll('.mini-player-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const key = card.dataset.key;
-            const p1 = document.getElementById('player1Select');
-            if (p1.value !== key) {
-                p1.value = key;
-                updateAll();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        });
-    });
+    attachCardListeners();
 }
 
 function openPage(pageKey) {
