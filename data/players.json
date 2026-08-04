@@ -1,949 +1,811 @@
 {
-  "maxStat": 11000,
+  "maxStat": 11500,
   "players": {
 
     "tsubasa_dream_dc": {
       "name": "Tsubasa Ozora",
       "version": "Dream - Dreamfest Captain",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Japan - Nankatsu SC",
-      "stats": {
-        "kick": 10245,
-        "dribble": 9876,
-        "speed": 9654,
-        "technique": 9432,
-        "power": 8543,
-        "defense": 7234,
-        "pass": 9890
-      },
+      "stats": {"kick": 10245, "dribble": 9876, "speed": 9654, "technique": 9432, "power": 8543, "defense": 7234, "pass": 9890},
       "skills": ["Drive Tiger Shot", "Overhead Kick", "Golden Combi", "Hawk Shot"],
-      "image": "⚽",
-      "rating": 4.9,
-      "votes": 2547
+      "image": "⚽", "rating": 4.9, "votes": 2547
     },
     "tsubasa_dream_wc": {
       "name": "Tsubasa Ozora",
       "version": "Dream - World Cup Captain",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Japan National",
-      "stats": {
-        "kick": 10320,
-        "dribble": 9920,
-        "speed": 9700,
-        "technique": 9500,
-        "power": 8600,
-        "defense": 7300,
-        "pass": 9950
-      },
+      "stats": {"kick": 10320, "dribble": 9920, "speed": 9700, "technique": 9500, "power": 8600, "defense": 7300, "pass": 9950},
       "skills": ["Drive Tiger Shot V2", "Rising Shot", "Golden Combi", "Hawk Shot"],
-      "image": "⚽",
-      "rating": 4.9,
-      "votes": 1890
+      "image": "⚽", "rating": 4.9, "votes": 1890
+    },
+    "tsubasa_dream_sp": {
+      "name": "Tsubasa Ozora",
+      "version": "Dream - Super Coach",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Nankatsu SC",
+      "stats": {"kick": 10450, "dribble": 10020, "speed": 9800, "technique": 9600, "power": 8700, "defense": 7400, "pass": 10050},
+      "skills": ["Drive Tiger Shot V3", "Overhead Kick", "Golden Combi", "Hawk Shot", "Captain's Ace"],
+      "image": "⚽", "rating": 5.0, "votes": 2100
     },
     "tsubasa_black_jr": {
       "name": "Tsubasa Ozora",
       "version": "Black - Jr. Youth Arc",
-      "rarity": "BLACK",
-      "color": "black",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Nankatsu Jr. High",
-      "stats": {
-        "kick": 8520,
-        "dribble": 8340,
-        "speed": 8120,
-        "technique": 7950,
-        "power": 7230,
-        "defense": 6100,
-        "pass": 8280
-      },
+      "stats": {"kick": 8520, "dribble": 8340, "speed": 8120, "technique": 7950, "power": 7230, "defense": 6100, "pass": 8280},
       "skills": ["Tiger Shot", "Overhead Kick", "Golden Combi"],
-      "image": "⚽",
-      "rating": 4.6,
-      "votes": 1234
+      "image": "⚽", "rating": 4.6, "votes": 1234
+    },
+    "tsubasa_black_school": {
+      "name": "Tsubasa Ozora",
+      "version": "Black - National Tournament",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Nankatsu SC",
+      "stats": {"kick": 8750, "dribble": 8520, "speed": 8300, "technique": 8120, "power": 7400, "defense": 6300, "pass": 8500},
+      "skills": ["Tiger Shot", "Golden Combi", "Rising Shot", "Hawk Shot"],
+      "image": "⚽", "rating": 4.7, "votes": 1456
     },
     "tsubasa_gold_saint": {
       "name": "Tsubasa Ozora",
       "version": "Gold - Saint Correspondence",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
-      "team": "🇧🇷 Santos FC / 🇪🇸 Barcelona",
-      "stats": {
-        "kick": 7450,
-        "dribble": 7320,
-        "speed": 7180,
-        "technique": 6900,
-        "power": 6500,
-        "defense": 5400,
-        "pass": 7290
-      },
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇧🇷 Santos FC",
+      "stats": {"kick": 7450, "dribble": 7320, "speed": 7180, "technique": 6900, "power": 6500, "defense": 5400, "pass": 7290},
       "skills": ["Drive Tiger Shot", "Golden Combi"],
-      "image": "⚽",
-      "rating": 4.4,
-      "votes": 856
+      "image": "⚽", "rating": 4.4, "votes": 856
+    },
+    "tsubasa_gold_barcelona": {
+      "name": "Tsubasa Ozora",
+      "version": "Gold - Barcelona Era",
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇪🇸 Barcelona B",
+      "stats": {"kick": 7500, "dribble": 7400, "speed": 7250, "technique": 7000, "power": 6550, "defense": 5450, "pass": 7350},
+      "skills": ["Drive Tiger Shot", "Golden Combi", "Messi Link"],
+      "image": "⚽", "rating": 4.5, "votes": 923
+    },
+    "tsubasa_silver_nankatsu": {
+      "name": "Tsubasa Ozora",
+      "version": "Silver - Nankatsu High",
+      "rarity": "SILVER", "color": "silver",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 6100, "dribble": 5950, "speed": 5800, "technique": 5650, "power": 5200, "defense": 4500, "pass": 5900},
+      "skills": ["Tiger Shot", "Overhead Kick"],
+      "image": "⚽", "rating": 4.1, "votes": 612
     },
     "tsubasa_blue_school": {
       "name": "Tsubasa Ozora",
       "version": "Blue - Elementary School",
-      "rarity": "BLUE",
-      "color": "blue",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "BLUE", "color": "blue",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Nankatsu Elementary",
-      "stats": {
-        "kick": 5230,
-        "dribble": 5180,
-        "speed": 5090,
-        "technique": 4920,
-        "power": 4500,
-        "defense": 3800,
-        "pass": 5160
-      },
+      "stats": {"kick": 5230, "dribble": 5180, "speed": 5090, "technique": 4920, "power": 4500, "defense": 3800, "pass": 5160},
       "skills": ["Tiger Shot"],
-      "image": "⚽",
-      "rating": 4.0,
-      "votes": 423
+      "image": "⚽", "rating": 4.0, "votes": 423
     },
 
     "hyuga_dream_dc": {
       "name": "Kojiro Hyuga",
       "version": "Dream - Dreamfest Captain",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Japan - Toho Academy",
-      "stats": {
-        "kick": 10432,
-        "dribble": 9234,
-        "speed": 9123,
-        "technique": 8876,
-        "power": 9890,
-        "defense": 7543,
-        "pass": 8654
-      },
+      "stats": {"kick": 10432, "dribble": 9234, "speed": 9123, "technique": 8876, "power": 9890, "defense": 7543, "pass": 8654},
       "skills": ["Tiger Shot", "Raijuu Shot", "Neo Tiger Shot", "Naraku Shot"],
-      "image": "⚽",
-      "rating": 4.8,
-      "votes": 2189
+      "image": "⚽", "rating": 4.8, "votes": 2189
     },
     "hyuga_dream_wc": {
       "name": "Kojiro Hyuga",
       "version": "Dream - World Cup Arc",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Japan National",
-      "stats": {
-        "kick": 10510,
-        "dribble": 9300,
-        "speed": 9180,
-        "technique": 8920,
-        "power": 9950,
-        "defense": 7600,
-        "pass": 8700
-      },
+      "stats": {"kick": 10510, "dribble": 9300, "speed": 9180, "technique": 8920, "power": 9950, "defense": 7600, "pass": 8700},
       "skills": ["Neo Tiger Shot V2", "Raijuu Shot", "Naraku Shot", "Gale Shot"],
-      "image": "⚽",
-      "rating": 4.9,
-      "votes": 1654
+      "image": "⚽", "rating": 4.9, "votes": 1654
+    },
+    "hyuga_dream_super": {
+      "name": "Kojiro Hyuga",
+      "version": "Dream - Super Striker",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Toho Academy",
+      "stats": {"kick": 10600, "dribble": 9450, "speed": 9300, "technique": 9050, "power": 10100, "defense": 7750, "pass": 8800},
+      "skills": ["Neo Tiger Shot V3", "Raijuu Shot", "Naraku Shot", "Gale Shot", "Beast Mode"],
+      "image": "⚽", "rating": 5.0, "votes": 1890
     },
     "hyuga_black_jr": {
       "name": "Kojiro Hyuga",
       "version": "Black - Jr. Youth Arc",
-      "rarity": "BLACK",
-      "color": "black",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Toho Jr. High",
-      "stats": {
-        "kick": 8780,
-        "dribble": 7650,
-        "speed": 7520,
-        "technique": 7300,
-        "power": 8230,
-        "defense": 6200,
-        "pass": 7100
-      },
+      "stats": {"kick": 8780, "dribble": 7650, "speed": 7520, "technique": 7300, "power": 8230, "defense": 6200, "pass": 7100},
       "skills": ["Tiger Shot", "Raijuu Shot", "Power Header"],
-      "image": "⚽",
-      "rating": 4.6,
-      "votes": 1123
+      "image": "⚽", "rating": 4.6, "votes": 1123
+    },
+    "hyuga_black_national": {
+      "name": "Kojiro Hyuga",
+      "version": "Black - National Tournament",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Toho Academy",
+      "stats": {"kick": 8950, "dribble": 7800, "speed": 7680, "technique": 7450, "power": 8400, "defense": 6350, "pass": 7250},
+      "skills": ["Neo Tiger Shot", "Raijuu Shot", "Power Header", "Tiger Rage"],
+      "image": "⚽", "rating": 4.7, "votes": 1287
     },
     "hyuga_silver_eu": {
       "name": "Kojiro Hyuga",
       "version": "Silver - Europe League",
-      "rarity": "SILVER",
-      "color": "silver",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "SILVER", "color": "silver",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇩🇪 Hamburg SV",
-      "stats": {
-        "kick": 6120,
-        "dribble": 5800,
-        "speed": 5680,
-        "technique": 5450,
-        "power": 6230,
-        "defense": 4900,
-        "pass": 5570
-      },
+      "stats": {"kick": 6120, "dribble": 5800, "speed": 5680, "technique": 5450, "power": 6230, "defense": 4900, "pass": 5570},
       "skills": ["Tiger Shot", "Power Shot"],
-      "image": "⚽",
-      "rating": 4.2,
-      "votes": 567
+      "image": "⚽", "rating": 4.2, "votes": 567
+    },
+    "hyuga_blue_school": {
+      "name": "Kojiro Hyuga",
+      "version": "Blue - Elementary School",
+      "rarity": "BLUE", "color": "blue",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Toho Elementary",
+      "stats": {"kick": 5100, "dribble": 4900, "speed": 4800, "technique": 4650, "power": 5200, "defense": 4100, "pass": 4720},
+      "skills": ["Tiger Shot"],
+      "image": "⚽", "rating": 3.9, "votes": 312
     },
 
     "genzo_dream_dc": {
       "name": "Genzo Wakabayashi",
       "version": "Dream - Dreamfest Captain",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "GK",
-      "posLabel": "🥅 Goalkeeper",
+      "rarity": "DREAM", "color": "dream",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
       "team": "🇯🇵 Japan - Nankatsu SC",
-      "stats": {
-        "kick": 4234,
-        "dribble": 5678,
-        "speed": 7123,
-        "technique": 9123,
-        "power": 7890,
-        "defense": 10345,
-        "pass": 8543
-      },
+      "stats": {"kick": 4234, "dribble": 5678, "speed": 7123, "technique": 9123, "power": 7890, "defense": 10345, "pass": 8543},
       "skills": ["Super Save", "God Hand", "Safe Block", "Hurricane Catch"],
-      "image": "🥅",
-      "rating": 4.9,
-      "votes": 1956
+      "image": "🥅", "rating": 4.9, "votes": 1956
     },
     "genzo_dream_wc": {
       "name": "Genzo Wakabayashi",
       "version": "Dream - World Cup Captain",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "GK",
-      "posLabel": "🥅 Goalkeeper",
+      "rarity": "DREAM", "color": "dream",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
       "team": "🇯🇵 Japan National",
-      "stats": {
-        "kick": 4300,
-        "dribble": 5750,
-        "speed": 7200,
-        "technique": 9200,
-        "power": 7950,
-        "defense": 10420,
-        "pass": 8600
-      },
+      "stats": {"kick": 4300, "dribble": 5750, "speed": 7200, "technique": 9200, "power": 7950, "defense": 10420, "pass": 8600},
       "skills": ["God Hand V2", "Super Save", "SGGK Catch", "Hurricane Catch"],
-      "image": "🥅",
-      "rating": 5.0,
-      "votes": 2340
+      "image": "🥅", "rating": 5.0, "votes": 2340
+    },
+    "genzo_dream_god": {
+      "name": "Genzo Wakabayashi",
+      "version": "Dream - SGGK God",
+      "rarity": "DREAM", "color": "dream",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
+      "team": "🇯🇵 Nankatsu SC",
+      "stats": {"kick": 4400, "dribble": 5850, "speed": 7300, "technique": 9350, "power": 8050, "defense": 10550, "pass": 8700},
+      "skills": ["God Hand V3", "Super Save", "SGGK Catch", "Hurricane Catch", "Perfect Defense"],
+      "image": "🥅", "rating": 5.0, "votes": 2890
     },
     "genzo_black_eu": {
       "name": "Genzo Wakabayashi",
       "version": "Black - Europe League",
-      "rarity": "BLACK",
-      "color": "black",
-      "position": "GK",
-      "posLabel": "🥅 Goalkeeper",
-      "team": "🇩🇪 Bayern Munich / 🇩🇪 Hamburger SV",
-      "stats": {
-        "kick": 3200,
-        "dribble": 4100,
-        "speed": 5400,
-        "technique": 6850,
-        "power": 5900,
-        "defense": 8120,
-        "pass": 6400
-      },
+      "rarity": "BLACK", "color": "black",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
+      "team": "🇩🇪 Hamburger SV",
+      "stats": {"kick": 3200, "dribble": 4100, "speed": 5400, "technique": 6850, "power": 5900, "defense": 8120, "pass": 6400},
       "skills": ["Super Save", "God Hand", "Punch Clear"],
-      "image": "🥅",
-      "rating": 4.7,
-      "votes": 1342
+      "image": "🥅", "rating": 4.7, "votes": 1342
+    },
+    "genzo_black_bayern": {
+      "name": "Genzo Wakabayashi",
+      "version": "Black - Bayern Munich",
+      "rarity": "BLACK", "color": "black",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
+      "team": "🇩🇪 Bayern Munich",
+      "stats": {"kick": 3300, "dribble": 4200, "speed": 5500, "technique": 6950, "power": 6000, "defense": 8300, "pass": 6500},
+      "skills": ["Super Save", "God Hand", "Punch Clear", "European Wall"],
+      "image": "🥅", "rating": 4.8, "votes": 1456
     },
     "genzo_gold_school": {
       "name": "Genzo Wakabayashi",
       "version": "Gold - School Arc",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "GK",
-      "posLabel": "🥅 Goalkeeper",
+      "rarity": "GOLD", "color": "gold",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 2800,
-        "dribble": 3500,
-        "speed": 4500,
-        "technique": 5800,
-        "power": 5000,
-        "defense": 6850,
-        "pass": 5400
-      },
+      "stats": {"kick": 2800, "dribble": 3500, "speed": 4500, "technique": 5800, "power": 5000, "defense": 6850, "pass": 5400},
       "skills": ["Super Save", "Safe Block"],
-      "image": "🥅",
-      "rating": 4.3,
-      "votes": 678
+      "image": "🥅", "rating": 4.3, "votes": 678
+    },
+    "genzo_silver_jr": {
+      "name": "Genzo Wakabayashi",
+      "version": "Silver - Jr. Youth",
+      "rarity": "SILVER", "color": "silver",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
+      "team": "🇯🇵 Nankatsu Jr. High",
+      "stats": {"kick": 2400, "dribble": 3000, "speed": 3800, "technique": 4900, "power": 4200, "defense": 5750, "pass": 4500},
+      "skills": ["Safe Block", "Punch Clear"],
+      "image": "🥅", "rating": 4.0, "votes": 345
     },
 
     "misaki_dream_dc": {
       "name": "Taro Misaki",
       "version": "Dream - Dreamfest Captain",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Japan - Nankatsu SC",
-      "stats": {
-        "kick": 9654,
-        "dribble": 9876,
-        "speed": 9890,
-        "technique": 9234,
-        "power": 8123,
-        "defense": 6789,
-        "pass": 10123
-      },
+      "stats": {"kick": 9654, "dribble": 9876, "speed": 9890, "technique": 9234, "power": 8123, "defense": 6789, "pass": 10123},
       "skills": ["Twin Shot", "Heel Lift", "Golden Combi", "Acrobat Save"],
-      "image": "⚽",
-      "rating": 4.7,
-      "votes": 1834
+      "image": "⚽", "rating": 4.7, "votes": 1834
+    },
+    "misaki_dream_wc": {
+      "name": "Taro Misaki",
+      "version": "Dream - World Cup",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Japan National",
+      "stats": {"kick": 9750, "dribble": 9950, "speed": 9980, "technique": 9350, "power": 8200, "defense": 6850, "pass": 10200},
+      "skills": ["Twin Shot V2", "Heel Lift", "Golden Combi", "Acrobat Save", "Heel Master"],
+      "image": "⚽", "rating": 4.8, "votes": 1654
     },
     "misaki_black_eu": {
       "name": "Taro Misaki",
       "version": "Black - Europe Arc",
-      "rarity": "BLACK",
-      "color": "black",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇩🇪 FC St. Pauli",
-      "stats": {
-        "kick": 7950,
-        "dribble": 8200,
-        "speed": 8230,
-        "technique": 7650,
-        "power": 6700,
-        "defense": 5600,
-        "pass": 8350
-      },
+      "stats": {"kick": 7950, "dribble": 8200, "speed": 8230, "technique": 7650, "power": 6700, "defense": 5600, "pass": 8350},
       "skills": ["Twin Shot", "Heel Lift", "Golden Combi"],
-      "image": "⚽",
-      "rating": 4.5,
-      "votes": 967
+      "image": "⚽", "rating": 4.5, "votes": 967
     },
     "misaki_gold_jr": {
       "name": "Taro Misaki",
       "version": "Gold - Jr. Youth",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Nankatsu Jr. High",
-      "stats": {
-        "kick": 7120,
-        "dribble": 7340,
-        "speed": 7350,
-        "technique": 6900,
-        "power": 6080,
-        "defense": 5100,
-        "pass": 7450
-      },
+      "stats": {"kick": 7120, "dribble": 7340, "speed": 7350, "technique": 6900, "power": 6080, "defense": 5100, "pass": 7450},
       "skills": ["Twin Shot", "Heel Lift"],
-      "image": "⚽",
-      "rating": 4.3,
-      "votes": 612
+      "image": "⚽", "rating": 4.3, "votes": 612
+    },
+    "misaki_blue_nankatsu": {
+      "name": "Taro Misaki",
+      "version": "Blue - Nankatsu High",
+      "rarity": "BLUE", "color": "blue",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 5100, "dribble": 5300, "speed": 5320, "technique": 4950, "power": 4350, "defense": 3650, "pass": 5400},
+      "skills": ["Twin Shot"],
+      "image": "⚽", "rating": 3.9, "votes": 312
     },
 
+    "ishizaki_dream": {
+      "name": "Ryoichi Ishizaki",
+      "version": "Dream - Toho Captain",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Toho Academy",
+      "stats": {"kick": 8500, "dribble": 8400, "speed": 8500, "technique": 7900, "power": 8200, "defense": 6800, "pass": 7600},
+      "skills": ["Dash Tackle", "Triangle Shot", "Speed Burst", "Ishizaki's Pride"],
+      "image": "⚽", "rating": 4.7, "votes": 1123
+    },
     "ishizaki_gold": {
       "name": "Ryoichi Ishizaki",
       "version": "Gold - Toho Academy",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Toho Academy",
-      "stats": {
-        "kick": 7456,
-        "dribble": 7234,
-        "speed": 7345,
-        "technique": 6789,
-        "power": 7123,
-        "defense": 5678,
-        "pass": 6456
-      },
+      "stats": {"kick": 7456, "dribble": 7234, "speed": 7345, "technique": 6789, "power": 7123, "defense": 5678, "pass": 6456},
       "skills": ["Dash Tackle", "Triangle Shot", "Speed Burst"],
-      "image": "⚽",
-      "rating": 4.3,
-      "votes": 892
+      "image": "⚽", "rating": 4.3, "votes": 892
     },
     "ishizaki_silver": {
       "name": "Ryoichi Ishizaki",
       "version": "Silver - School Tournament",
-      "rarity": "SILVER",
-      "color": "silver",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "SILVER", "color": "silver",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Toho Jr. High",
-      "stats": {
-        "kick": 5680,
-        "dribble": 5520,
-        "speed": 5600,
-        "technique": 5180,
-        "power": 5430,
-        "defense": 4320,
-        "pass": 4920
-      },
+      "stats": {"kick": 5680, "dribble": 5520, "speed": 5600, "technique": 5180, "power": 5430, "defense": 4320, "pass": 4920},
       "skills": ["Dash Tackle", "Triangle Shot"],
-      "image": "⚽",
-      "rating": 3.9,
-      "votes": 423
+      "image": "⚽", "rating": 3.9, "votes": 423
+    },
+    "ishizaki_blue": {
+      "name": "Ryoichi Ishizaki",
+      "version": "Blue - Elementary",
+      "rarity": "BLUE", "color": "blue",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Toho Elementary",
+      "stats": {"kick": 4800, "dribble": 4650, "speed": 4720, "technique": 4350, "power": 4580, "defense": 3650, "pass": 4150},
+      "skills": ["Dash Tackle"],
+      "image": "⚽", "rating": 3.7, "votes": 234
     },
 
     "soda_silver": {
       "name": "Hideo Soda",
       "version": "Silver - Nankatsu SC",
-      "rarity": "SILVER",
-      "color": "silver",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "SILVER", "color": "silver",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 5890,
-        "dribble": 6234,
-        "speed": 6123,
-        "technique": 7345,
-        "power": 5567,
-        "defense": 6234,
-        "pass": 7234
-      },
+      "stats": {"kick": 5890, "dribble": 6234, "speed": 6123, "technique": 7345, "power": 5567, "defense": 6234, "pass": 7234},
       "skills": ["Perfect Pass", "Tactical Mind", "Through Ball"],
-      "image": "⚽",
-      "rating": 4.5,
-      "votes": 1245
+      "image": "⚽", "rating": 4.5, "votes": 1245
     },
     "soda_gold_wc": {
       "name": "Hideo Soda",
       "version": "Gold - World Cup",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "GOLD", "color": "gold",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Japan National",
-      "stats": {
-        "kick": 6780,
-        "dribble": 7120,
-        "speed": 6900,
-        "technique": 8100,
-        "power": 6300,
-        "defense": 6900,
-        "pass": 7950
-      },
+      "stats": {"kick": 6780, "dribble": 7120, "speed": 6900, "technique": 8100, "power": 6300, "defense": 6900, "pass": 7950},
       "skills": ["Perfect Pass", "Tactical Mind", "Through Ball", "Captain's Command"],
-      "image": "⚽",
-      "rating": 4.6,
-      "votes": 1023
+      "image": "⚽", "rating": 4.6, "votes": 1023
     },
     "soda_blue_jr": {
       "name": "Hideo Soda",
       "version": "Blue - Jr. Youth",
-      "rarity": "BLUE",
-      "color": "blue",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "BLUE", "color": "blue",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Nankatsu Jr. High",
-      "stats": {
-        "kick": 4900,
-        "dribble": 5200,
-        "speed": 5100,
-        "technique": 6120,
-        "power": 4640,
-        "defense": 5200,
-        "pass": 6030
-      },
+      "stats": {"kick": 4900, "dribble": 5200, "speed": 5100, "technique": 6120, "power": 4640, "defense": 5200, "pass": 6030},
       "skills": ["Perfect Pass", "Tactical Mind"],
-      "image": "⚽",
-      "rating": 4.0,
-      "votes": 345
+      "image": "⚽", "rating": 4.0, "votes": 345
     },
 
     "jito_blue": {
       "name": "Hitoshi Jito",
       "version": "Blue - Nankatsu SC",
-      "rarity": "BLUE",
-      "color": "blue",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "BLUE", "color": "blue",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 5234,
-        "dribble": 5456,
-        "speed": 5123,
-        "technique": 5789,
-        "power": 5890,
-        "defense": 5678,
-        "pass": 5456
-      },
+      "stats": {"kick": 5234, "dribble": 5456, "speed": 5123, "technique": 5789, "power": 5890, "defense": 5678, "pass": 5456},
       "skills": ["Power Shot", "Interception", "Slide Tackle"],
-      "image": "⚽",
-      "rating": 4.2,
-      "votes": 654
+      "image": "⚽", "rating": 4.2, "votes": 654
     },
     "jito_gold_wc": {
       "name": "Hitoshi Jito",
       "version": "Gold - World Cup",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "GOLD", "color": "gold",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Japan National",
-      "stats": {
-        "kick": 6450,
-        "dribble": 6700,
-        "speed": 6300,
-        "technique": 7100,
-        "power": 7250,
-        "defense": 6950,
-        "pass": 6700
-      },
+      "stats": {"kick": 6450, "dribble": 6700, "speed": 6300, "technique": 7100, "power": 7250, "defense": 6950, "pass": 6700},
       "skills": ["Power Shot", "Interception", "Slide Tackle", "Iron Wall"],
-      "image": "⚽",
-      "rating": 4.4,
-      "votes": 478
+      "image": "⚽", "rating": 4.4, "votes": 478
+    },
+    "jito_silver_nankatsu": {
+      "name": "Hitoshi Jito",
+      "version": "Silver - Nankatsu High",
+      "rarity": "SILVER", "color": "silver",
+      "position": "MF", "posLabel": "🎯 Midfielder",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 5800, "dribble": 6000, "speed": 5650, "technique": 6400, "power": 6500, "defense": 6250, "pass": 6000},
+      "skills": ["Power Shot", "Interception"],
+      "image": "⚽", "rating": 4.1, "votes": 345
     },
 
     "sano_blue": {
       "name": "Yoichiro Sano",
       "version": "Blue - Furano",
-      "rarity": "BLUE",
-      "color": "blue",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "BLUE", "color": "blue",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Furano",
-      "stats": {
-        "kick": 5456,
-        "dribble": 5678,
-        "speed": 5789,
-        "technique": 5234,
-        "power": 4890,
-        "defense": 5345,
-        "pass": 5567
-      },
+      "stats": {"kick": 5456, "dribble": 5678, "speed": 5789, "technique": 5234, "power": 4890, "defense": 5345, "pass": 5567},
       "skills": ["Speed Play", "Cross Pass", "Dribble Rush"],
-      "image": "⚽",
-      "rating": 4.1,
-      "votes": 567
+      "image": "⚽", "rating": 4.1, "votes": 567
+    },
+    "sano_silver_furano": {
+      "name": "Yoichiro Sano",
+      "version": "Silver - Furano Captain",
+      "rarity": "SILVER", "color": "silver",
+      "position": "MF", "posLabel": "🎯 Midfielder",
+      "team": "🇯🇵 Furano",
+      "stats": {"kick": 6000, "dribble": 6250, "speed": 6400, "technique": 5800, "power": 5400, "defense": 5900, "pass": 6150},
+      "skills": ["Speed Play", "Cross Pass", "Dribble Rush", "Furano Wind"],
+      "image": "⚽", "rating": 4.3, "votes": 423
     },
 
     "urabe_green": {
       "name": "Tsuyoshi Urabe",
       "version": "Green - Nankatsu",
-      "rarity": "GREEN",
-      "color": "green",
-      "position": "DF",
-      "posLabel": "🛡️ Defender",
+      "rarity": "GREEN", "color": "green",
+      "position": "DF", "posLabel": "🛡️ Defender",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 3567,
-        "dribble": 4234,
-        "speed": 4456,
-        "technique": 5123,
-        "power": 5567,
-        "defense": 5890,
-        "pass": 4345
-      },
+      "stats": {"kick": 3567, "dribble": 4234, "speed": 4456, "technique": 5123, "power": 5567, "defense": 5890, "pass": 4345},
       "skills": ["Iron Wall", "Power Tackle", "Header Clear"],
-      "image": "🛡️",
-      "rating": 4.4,
-      "votes": 723
+      "image": "🛡️", "rating": 4.4, "votes": 723
     },
     "urabe_silver_wc": {
       "name": "Tsuyoshi Urabe",
       "version": "Silver - World Cup",
-      "rarity": "SILVER",
-      "color": "silver",
-      "position": "DF",
-      "posLabel": "🛡️ Defender",
+      "rarity": "SILVER", "color": "silver",
+      "position": "DF", "posLabel": "🛡️ Defender",
       "team": "🇯🇵 Japan National",
-      "stats": {
-        "kick": 4500,
-        "dribble": 5300,
-        "speed": 5600,
-        "technique": 6450,
-        "power": 6950,
-        "defense": 7400,
-        "pass": 5450
-      },
+      "stats": {"kick": 4500, "dribble": 5300, "speed": 5600, "technique": 6450, "power": 6950, "defense": 7400, "pass": 5450},
       "skills": ["Iron Wall", "Power Tackle", "Header Clear", "Captain's Block"],
-      "image": "🛡️",
-      "rating": 4.5,
-      "votes": 612
+      "image": "🛡️", "rating": 4.5, "votes": 612
+    },
+    "urabe_gold_veteran": {
+      "name": "Tsuyoshi Urabe",
+      "version": "Gold - Veteran",
+      "rarity": "GOLD", "color": "gold",
+      "position": "DF", "posLabel": "🛡️ Defender",
+      "team": "🇯🇵 Nankatsu SC",
+      "stats": {"kick": 5200, "dribble": 6000, "speed": 6350, "technique": 7250, "power": 7850, "defense": 8350, "pass": 6150},
+      "skills": ["Iron Wall", "Power Tackle", "Header Clear", "Veteran's Wisdom"],
+      "image": "🛡️", "rating": 4.6, "votes": 789
     },
 
     "kisugi_gold": {
       "name": "Tatsuya Kisugi",
       "version": "Gold - Nankatsu",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "GOLD", "color": "gold",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 7234,
-        "dribble": 7456,
-        "speed": 7567,
-        "technique": 7123,
-        "power": 6456,
-        "defense": 6234,
-        "pass": 7345
-      },
+      "stats": {"kick": 7234, "dribble": 7456, "speed": 7567, "technique": 7123, "power": 6456, "defense": 6234, "pass": 7345},
       "skills": ["Speed Star", "Dribble Storm", "Perfect Cross"],
-      "image": "⚽",
-      "rating": 4.6,
-      "votes": 1456
+      "image": "⚽", "rating": 4.6, "votes": 1456
     },
     "kisugi_blue_jr": {
       "name": "Tatsuya Kisugi",
       "version": "Blue - Jr. Youth",
-      "rarity": "BLUE",
-      "color": "blue",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "BLUE", "color": "blue",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Nankatsu Jr. High",
-      "stats": {
-        "kick": 5400,
-        "dribble": 5580,
-        "speed": 5670,
-        "technique": 5340,
-        "power": 4830,
-        "defense": 4670,
-        "pass": 5500
-      },
+      "stats": {"kick": 5400, "dribble": 5580, "speed": 5670, "technique": 5340, "power": 4830, "defense": 4670, "pass": 5500},
       "skills": ["Speed Star", "Dribble Storm"],
-      "image": "⚽",
-      "rating": 4.0,
-      "votes": 423
+      "image": "⚽", "rating": 4.0, "votes": 423
+    },
+    "kisugi_silver_nankatsu": {
+      "name": "Tatsuya Kisugi",
+      "version": "Silver - Nankatsu High",
+      "rarity": "SILVER", "color": "silver",
+      "position": "MF", "posLabel": "🎯 Midfielder",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 6100, "dribble": 6300, "speed": 6400, "technique": 6000, "power": 5450, "defense": 5250, "pass": 6200},
+      "skills": ["Speed Star", "Dribble Storm", "Perfect Cross"],
+      "image": "⚽", "rating": 4.2, "votes": 567
     },
 
     "kazemaru_gold": {
       "name": "Ichiro Kazemaru",
       "version": "Gold - Nankatsu",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "DF",
-      "posLabel": "🛡️ Defender",
+      "rarity": "GOLD", "color": "gold",
+      "position": "DF", "posLabel": "🛡️ Defender",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 5678,
-        "dribble": 6123,
-        "speed": 7890,
-        "technique": 6456,
-        "power": 6234,
-        "defense": 7234,
-        "pass": 6456
-      },
+      "stats": {"kick": 5678, "dribble": 6123, "speed": 7890, "technique": 6456, "power": 6234, "defense": 7234, "pass": 6456},
       "skills": ["Speed Dash", "Quick Tackle", "Counter Attack"],
-      "image": "🛡️",
-      "rating": 4.5,
-      "votes": 1123
+      "image": "🛡️", "rating": 4.5, "votes": 1123
     },
     "kazemaru_silver_wc": {
       "name": "Ichiro Kazemaru",
       "version": "Silver - World Cup",
-      "rarity": "SILVER",
-      "color": "silver",
-      "position": "DF",
-      "posLabel": "🛡️ Defender",
+      "rarity": "SILVER", "color": "silver",
+      "position": "DF", "posLabel": "🛡️ Defender",
       "team": "🇯🇵 Japan National",
-      "stats": {
-        "kick": 6500,
-        "dribble": 7000,
-        "speed": 8950,
-        "technique": 7400,
-        "power": 7150,
-        "defense": 8300,
-        "pass": 7400
-      },
+      "stats": {"kick": 6500, "dribble": 7000, "speed": 8950, "technique": 7400, "power": 7150, "defense": 8300, "pass": 7400},
       "skills": ["Speed Dash", "Quick Tackle", "Counter Attack", "Lightning Run"],
-      "image": "🛡️",
-      "rating": 4.6,
-      "votes": 890
+      "image": "🛡️", "rating": 4.6, "votes": 890
+    },
+    "kazemaru_blue_nankatsu": {
+      "name": "Ichiro Kazemaru",
+      "version": "Blue - Nankatsu High",
+      "rarity": "BLUE", "color": "blue",
+      "position": "DF", "posLabel": "🛡️ Defender",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 4800, "dribble": 5200, "speed": 6650, "technique": 5450, "power": 5300, "defense": 6100, "pass": 5450},
+      "skills": ["Speed Dash", "Quick Tackle"],
+      "image": "🛡️", "rating": 4.0, "votes": 345
     },
 
     "ishikawa_silver": {
       "name": "Masashi Ishikawa",
       "version": "Silver - Nankatsu",
-      "rarity": "SILVER",
-      "color": "silver",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "SILVER", "color": "silver",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 6123,
-        "dribble": 6345,
-        "speed": 5890,
-        "technique": 6789,
-        "power": 5567,
-        "defense": 6012,
-        "pass": 6678
-      },
+      "stats": {"kick": 6123, "dribble": 6345, "speed": 5890, "technique": 6789, "power": 5567, "defense": 6012, "pass": 6678},
       "skills": ["Long Pass", "Vision Play", "Free Kick"],
-      "image": "⚽",
-      "rating": 4.3,
-      "votes": 845
+      "image": "⚽", "rating": 4.3, "votes": 845
+    },
+    "ishikawa_gold_wc": {
+      "name": "Masashi Ishikawa",
+      "version": "Gold - World Cup",
+      "rarity": "GOLD", "color": "gold",
+      "position": "MF", "posLabel": "🎯 Midfielder",
+      "team": "🇯🇵 Japan National",
+      "stats": {"kick": 6900, "dribble": 7150, "speed": 6650, "technique": 7650, "power": 6300, "defense": 6800, "pass": 7500},
+      "skills": ["Long Pass", "Vision Play", "Free Kick", "Master Playmaker"],
+      "image": "⚽", "rating": 4.5, "votes": 678
     },
 
     "sakai_blue": {
       "name": "Hisato Sakai",
       "version": "Blue - Nankatsu",
-      "rarity": "BLUE",
-      "color": "blue",
-      "position": "DF",
-      "posLabel": "🛡️ Defender",
+      "rarity": "BLUE", "color": "blue",
+      "position": "DF", "posLabel": "🛡️ Defender",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 4234,
-        "dribble": 4890,
-        "speed": 5234,
-        "technique": 5456,
-        "power": 5678,
-        "defense": 6012,
-        "pass": 5123
-      },
+      "stats": {"kick": 4234, "dribble": 4890, "speed": 5234, "technique": 5456, "power": 5678, "defense": 6012, "pass": 5123},
       "skills": ["Solid Defense", "Body Block", "Strong Tackle"],
-      "image": "🛡️",
-      "rating": 4.2,
-      "votes": 612
+      "image": "🛡️", "rating": 4.2, "votes": 612
+    },
+    "sakai_silver_nankatsu": {
+      "name": "Hisato Sakai",
+      "version": "Silver - Nankatsu High",
+      "rarity": "SILVER", "color": "silver",
+      "position": "DF", "posLabel": "🛡️ Defender",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 4800, "dribble": 5500, "speed": 5900, "technique": 6150, "power": 6400, "defense": 6800, "pass": 5800},
+      "skills": ["Solid Defense", "Body Block", "Strong Tackle", "Wall Formation"],
+      "image": "🛡️", "rating": 4.4, "votes": 478
     },
 
     "nitta_silver": {
       "name": "Kazuya Nitta",
       "version": "Silver - Toho",
-      "rarity": "SILVER",
-      "color": "silver",
-      "position": "MF",
-      "posLabel": "🎯 Midfielder",
+      "rarity": "SILVER", "color": "silver",
+      "position": "MF", "posLabel": "🎯 Midfielder",
       "team": "🇯🇵 Toho Academy",
-      "stats": {
-        "kick": 6234,
-        "dribble": 6456,
-        "speed": 6234,
-        "technique": 6567,
-        "power": 5678,
-        "defense": 5789,
-        "pass": 6678
-      },
+      "stats": {"kick": 6234, "dribble": 6456, "speed": 6234, "technique": 6567, "power": 5678, "defense": 5789, "pass": 6678},
       "skills": ["Mid Shot", "Dribble Skill", "Heel Pass"],
-      "image": "⚽",
-      "rating": 4.4,
-      "votes": 967
+      "image": "⚽", "rating": 4.4, "votes": 967
+    },
+    "nitta_gold_wc": {
+      "name": "Kazuya Nitta",
+      "version": "Gold - World Cup",
+      "rarity": "GOLD", "color": "gold",
+      "position": "MF", "posLabel": "🎯 Midfielder",
+      "team": "🇯🇵 Japan National",
+      "stats": {"kick": 7100, "dribble": 7350, "speed": 7100, "technique": 7450, "power": 6450, "defense": 6550, "pass": 7600},
+      "skills": ["Mid Shot", "Dribble Skill", "Heel Pass", "Toho Pride"],
+      "image": "⚽", "rating": 4.6, "votes": 789
     },
 
     "yamada_green": {
       "name": "Keiichi Yamada",
       "version": "Green - Nankatsu",
-      "rarity": "GREEN",
-      "color": "green",
-      "position": "DF",
-      "posLabel": "🛡️ Defender",
+      "rarity": "GREEN", "color": "green",
+      "position": "DF", "posLabel": "🛡️ Defender",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 3678,
-        "dribble": 4123,
-        "speed": 4456,
-        "technique": 4678,
-        "power": 5234,
-        "defense": 5567,
-        "pass": 4234
-      },
+      "stats": {"kick": 3678, "dribble": 4123, "speed": 4456, "technique": 4678, "power": 5234, "defense": 5567, "pass": 4234},
       "skills": ["Defense Wall", "Header", "Tackle"],
-      "image": "🛡️",
-      "rating": 4.0,
-      "votes": 489
+      "image": "🛡️", "rating": 4.0, "votes": 489
+    },
+    "yamada_blue_nankatsu": {
+      "name": "Keiichi Yamada",
+      "version": "Blue - Nankatsu High",
+      "rarity": "BLUE", "color": "blue",
+      "position": "DF", "posLabel": "🛡️ Defender",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 4250, "dribble": 4750, "speed": 5150, "technique": 5400, "power": 6050, "defense": 6450, "pass": 4900},
+      "skills": ["Defense Wall", "Header", "Tackle", "Nankatsu Spirit"],
+      "image": "🛡️", "rating": 4.2, "votes": 345
     },
 
     "aoi_blue": {
       "name": "Akiyoshi Aoi",
       "version": "Blue - Toho GK",
-      "rarity": "BLUE",
-      "color": "blue",
-      "position": "GK",
-      "posLabel": "🥅 Goalkeeper",
+      "rarity": "BLUE", "color": "blue",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
       "team": "🇯🇵 Toho Academy",
-      "stats": {
-        "kick": 3123,
-        "dribble": 3678,
-        "speed": 4123,
-        "technique": 4890,
-        "power": 4456,
-        "defense": 5789,
-        "pass": 4567
-      },
+      "stats": {"kick": 3123, "dribble": 3678, "speed": 4123, "technique": 4890, "power": 4456, "defense": 5789, "pass": 4567},
       "skills": ["Safe Hands", "Quick Save", "Punch Clear"],
-      "image": "🥅",
-      "rating": 4.3,
-      "votes": 678
+      "image": "🥅", "rating": 4.3, "votes": 678
+    },
+    "aoi_silver_toho": {
+      "name": "Akiyoshi Aoi",
+      "version": "Silver - Toho Captain",
+      "rarity": "SILVER", "color": "silver",
+      "position": "GK", "posLabel": "🥅 Goalkeeper",
+      "team": "🇯🇵 Toho Academy",
+      "stats": {"kick": 3800, "dribble": 4500, "speed": 5050, "technique": 5950, "power": 5450, "defense": 7050, "pass": 5550},
+      "skills": ["Safe Hands", "Quick Save", "Punch Clear", "Toho Defense"],
+      "image": "🥅", "rating": 4.5, "votes": 567
     },
 
     "takeshi_green": {
       "name": "Takeshi Mori",
       "version": "Green - Nankatsu",
-      "rarity": "GREEN",
-      "color": "green",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "GREEN", "color": "green",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇯🇵 Nankatsu SC",
-      "stats": {
-        "kick": 4789,
-        "dribble": 4890,
-        "speed": 4678,
-        "technique": 4234,
-        "power": 4567,
-        "defense": 3890,
-        "pass": 4123
-      },
+      "stats": {"kick": 4789, "dribble": 4890, "speed": 4678, "technique": 4234, "power": 4567, "defense": 3890, "pass": 4123},
       "skills": ["Power Shot", "Speed Attack"],
-      "image": "⚽",
-      "rating": 3.9,
-      "votes": 423
+      "image": "⚽", "rating": 3.9, "votes": 423
+    },
+    "takeshi_blue_nankatsu": {
+      "name": "Takeshi Mori",
+      "version": "Blue - Nankatsu High",
+      "rarity": "BLUE", "color": "blue",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Nankatsu High",
+      "stats": {"kick": 5550, "dribble": 5650, "speed": 5400, "technique": 4900, "power": 5300, "defense": 4500, "pass": 4750},
+      "skills": ["Power Shot", "Speed Attack", "Power Header"],
+      "image": "⚽", "rating": 4.1, "votes": 312
     },
 
     "ronaldo_dream_dc": {
       "name": "Ronaldo",
       "version": "Dream - Brazilian Star",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇧🇷 Brazil National",
-      "stats": {
-        "kick": 10345,
-        "dribble": 10123,
-        "speed": 10234,
-        "technique": 9876,
-        "power": 9890,
-        "defense": 7123,
-        "pass": 9456
-      },
+      "stats": {"kick": 10345, "dribble": 10123, "speed": 10234, "technique": 9876, "power": 9890, "defense": 7123, "pass": 9456},
       "skills": ["Triple Tiger", "Phantom Shot", "Phoenix Shot", "Galactic Shot"],
-      "image": "⚽",
-      "rating": 5.0,
-      "votes": 3842
+      "image": "⚽", "rating": 5.0, "votes": 3842
     },
     "ronaldo_dream_wc": {
       "name": "Ronaldo",
       "version": "Dream - World Cup",
-      "rarity": "DREAM",
-      "color": "dream",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇧🇷 Brazil National",
-      "stats": {
-        "kick": 10450,
-        "dribble": 10220,
-        "speed": 10310,
-        "technique": 9950,
-        "power": 9980,
-        "defense": 7200,
-        "pass": 9500
-      },
+      "stats": {"kick": 10450, "dribble": 10220, "speed": 10310, "technique": 9950, "power": 9980, "defense": 7200, "pass": 9500},
       "skills": ["Triple Tiger V2", "Phantom Shot", "Phoenix Shot", "Galactic Shot", "Nova Shot"],
-      "image": "⚽",
-      "rating": 5.0,
-      "votes": 4100
+      "image": "⚽", "rating": 5.0, "votes": 4100
+    },
+    "ronaldo_dream_legend": {
+      "name": "Ronaldo",
+      "version": "Dream - Legend Edition",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇧🇷 Brazil Legend",
+      "stats": {"kick": 10600, "dribble": 10400, "speed": 10500, "technique": 10100, "power": 10100, "defense": 7400, "pass": 9700},
+      "skills": ["Triple Tiger V3", "Phantom Shot", "Phoenix Shot", "Galactic Shot", "Nova Shot", "R9 Legacy"],
+      "image": "⚽", "rating": 5.0, "votes": 4500
     },
     "ronaldo_black_jr": {
       "name": "Ronaldo",
       "version": "Black - Jr. Brazil",
-      "rarity": "BLACK",
-      "color": "black",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇧🇷 Brazil Youth",
-      "stats": {
-        "kick": 8450,
-        "dribble": 8230,
-        "speed": 8350,
-        "technique": 8100,
-        "power": 8120,
-        "defense": 5800,
-        "pass": 7700
-      },
+      "stats": {"kick": 8450, "dribble": 8230, "speed": 8350, "technique": 8100, "power": 8120, "defense": 5800, "pass": 7700},
       "skills": ["Triple Tiger", "Phantom Shot", "Phoenix Shot"],
-      "image": "⚽",
-      "rating": 4.7,
-      "votes": 1890
+      "image": "⚽", "rating": 4.7, "votes": 1890
+    },
+    "ronaldo_gold_eu": {
+      "name": "Ronaldo",
+      "version": "Gold - Europe Era",
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇳🇱 PSV / 🇪🇸 Barcelona",
+      "stats": {"kick": 7600, "dribble": 7400, "speed": 7500, "technique": 7250, "power": 7300, "defense": 5200, "pass": 6950},
+      "skills": ["Triple Tiger", "Phantom Shot", "Cruyff Turn"],
+      "image": "⚽", "rating": 4.5, "votes": 1234
     },
 
     "pierre_black": {
       "name": "Pierre",
       "version": "Black - France",
-      "rarity": "BLACK",
-      "color": "black",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇫🇷 France National",
-      "stats": {
-        "kick": 9567,
-        "dribble": 9234,
-        "speed": 9123,
-        "technique": 8890,
-        "power": 8567,
-        "defense": 6789,
-        "pass": 9123
-      },
+      "stats": {"kick": 9567, "dribble": 9234, "speed": 9123, "technique": 8890, "power": 8567, "defense": 6789, "pass": 9123},
       "skills": ["Eiffel Shot", "Spin Shot", "Eiffel Tower"],
-      "image": "⚽",
-      "rating": 4.7,
-      "votes": 1567
+      "image": "⚽", "rating": 4.7, "votes": 1567
+    },
+    "pierre_dream_wc": {
+      "name": "Pierre",
+      "version": "Dream - World Cup",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇫🇷 France National",
+      "stats": {"kick": 9750, "dribble": 9450, "speed": 9350, "technique": 9100, "power": 8750, "defense": 6950, "pass": 9300},
+      "skills": ["Eiffel Shot V2", "Spin Shot", "Eiffel Tower", "French Flair"],
+      "image": "⚽", "rating": 4.8, "votes": 1234
     },
     "pierre_gold": {
       "name": "Pierre",
       "version": "Gold - France U-17",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🇫🇷 France U-17",
-      "stats": {
-        "kick": 7100,
-        "dribble": 6900,
-        "speed": 6800,
-        "technique": 6650,
-        "power": 6400,
-        "defense": 5050,
-        "pass": 6800
-      },
+      "stats": {"kick": 7100, "dribble": 6900, "speed": 6800, "technique": 6650, "power": 6400, "defense": 5050, "pass": 6800},
       "skills": ["Eiffel Shot", "Spin Shot"],
-      "image": "⚽",
-      "rating": 4.3,
-      "votes": 723
+      "image": "⚽", "rating": 4.3, "votes": 723
     },
 
     "brian_gold": {
       "name": "Brian Clough",
       "version": "Gold - England",
-      "rarity": "GOLD",
-      "color": "gold",
-      "position": "FW",
-      "posLabel": "⚡ Forward",
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
       "team": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England National",
-      "stats": {
-        "kick": 7567,
-        "dribble": 7234,
-        "speed": 7123,
-        "technique": 6890,
-        "power": 7456,
-        "defense": 6123,
-        "pass": 6789
-      },
+      "stats": {"kick": 7567, "dribble": 7234, "speed": 7123, "technique": 6890, "power": 7456, "defense": 6123, "pass": 6789},
       "skills": ["English Shot", "Power Header", "Precise Shot"],
-      "image": "⚽",
-      "rating": 4.5,
-      "votes": 1089
+      "image": "⚽", "rating": 4.5, "votes": 1089
+    },
+    "brian_black_prem": {
+      "name": "Brian Clough",
+      "version": "Black - Premier League",
+      "rarity": "BLACK", "color": "black",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Pro",
+      "stats": {"kick": 8600, "dribble": 8200, "speed": 8100, "technique": 7850, "power": 8500, "defense": 6950, "pass": 7700},
+      "skills": ["English Shot", "Power Header", "Precise Shot", "Clough's Passion"],
+      "image": "⚽", "rating": 4.7, "votes": 1123
+    },
+
+    "naturezapp_dream": {
+      "name": "Nature Zapp",
+      "version": "Dream - Italian Genius",
+      "rarity": "DREAM", "color": "dream",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇮🇹 Italy - Girueno",
+      "stats": {"kick": 9800, "dribble": 9650, "speed": 9200, "technique": 9950, "power": 7800, "defense": 6500, "pass": 9400},
+      "skills": ["Zapputein Shot", "Pendulum Shot", "Samba Feint", "Italian Flair"],
+      "image": "⚽", "rating": 4.8, "votes": 1234
+    },
+    "naturezapp_gold": {
+      "name": "Nature Zapp",
+      "version": "Gold - Girueno",
+      "rarity": "GOLD", "color": "gold",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇮🇹 Girueno",
+      "stats": {"kick": 7400, "dribble": 7250, "speed": 6900, "technique": 7500, "power": 5800, "defense": 4900, "pass": 7050},
+      "skills": ["Zapputein Shot", "Pendulum Shot"],
+      "image": "⚽", "rating": 4.4, "votes": 678
+    },
+
+    "aizawa_silver": {
+      "name": "Jun Aizawa",
+      "version": "Silver - Nankatsu",
+      "rarity": "SILVER", "color": "silver",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Nankatsu SC",
+      "stats": {"kick": 5900, "dribble": 5750, "speed": 5950, "technique": 5400, "power": 5200, "defense": 4400, "pass": 5000},
+      "skills": ["Speed Shot", "Quick Strike"],
+      "image": "⚽", "rating": 4.0, "votes": 234
+    },
+
+    "nakayama_blue": {
+      "name": "Shingo Nakayama",
+      "version": "Blue - Toho",
+      "rarity": "BLUE", "color": "blue",
+      "position": "DF", "posLabel": "🛡️ Defender",
+      "team": "🇯🇵 Toho Academy",
+      "stats": {"kick": 4100, "dribble": 4350, "speed": 4900, "technique": 5200, "power": 5500, "defense": 5950, "pass": 4800},
+      "skills": ["Solid Defense", "Tackle"],
+      "image": "🛡️", "rating": 4.1, "votes": 189
+    },
+
+    "kimura_blue": {
+      "name": "Hajime Kimura",
+      "version": "Blue - Furano",
+      "rarity": "BLUE", "color": "blue",
+      "position": "MF", "posLabel": "🎯 Midfielder",
+      "team": "🇯🇵 Furano",
+      "stats": {"kick": 4950, "dribble": 5200, "speed": 5100, "technique": 5300, "power": 4700, "defense": 4850, "pass": 5450},
+      "skills": ["Mid Shot", "Through Ball"],
+      "image": "⚽", "rating": 4.0, "votes": 167
+    },
+
+    "honda_blue": {
+      "name": "Yasuhiko Honda",
+      "version": "Blue - Meiwa",
+      "rarity": "BLUE", "color": "blue",
+      "position": "FW", "posLabel": "⚡ Forward",
+      "team": "🇯🇵 Meiwa",
+      "stats": {"kick": 5400, "dribble": 5100, "speed": 5200, "technique": 4800, "power": 5050, "defense": 4200, "pass": 4750},
+      "skills": ["Power Shot", "Header"],
+      "image": "⚽", "rating": 4.0, "votes": 145
+    },
+
+    "sakurai_silver": {
+      "name": "Hiroshi Sakurai",
+      "version": "Silver - Furano Captain",
+      "rarity": "SILVER", "color": "silver",
+      "position": "MF", "posLabel": "🎯 Midfielder",
+      "team": "🇯🇵 Furano",
+      "stats": {"kick": 6100, "dribble": 6350, "speed": 6500, "technique": 5900, "power": 5500, "defense": 6000, "pass": 6250},
+      "skills": ["Speed Play", "Dribble Rush", "Furano Pride"],
+      "image": "⚽", "rating": 4.3, "votes": 312
     }
   }
 }
