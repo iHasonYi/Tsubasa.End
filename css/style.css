@@ -12,7 +12,7 @@
     --dark: #0a1929;
     --card-bg: rgba(15, 30, 55, 0.95);
     --border: rgba(0, 150, 255, 0.3);
-    --max-stat: 10500;
+    --max-stat: 11000;
 }
 
 body {
@@ -336,7 +336,7 @@ body::before {
     gap: 10px;
 }
 
-.player-info { flex: 1; }
+.player-info { flex: 1; min-width: 0; }
 
 .player-rarity {
     display: inline-block;
@@ -357,10 +357,20 @@ body::before {
 .rarity-green { background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; }
 
 .player-name {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 900;
     color: #fff;
     margin-bottom: 3px;
+    line-height: 1.2;
+}
+
+.player-version {
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .player-jp {
@@ -389,13 +399,13 @@ body::before {
 }
 
 .player-image {
-    width: 100px; height: 100px;
+    width: 90px; height: 90px;
     border-radius: 50%;
     background: linear-gradient(135deg, #1e3a5f, #2c5282);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 45px;
     border: 3px solid var(--primary);
     box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
     position: relative;
@@ -471,7 +481,6 @@ body::before {
     margin-top: 2px;
 }
 
-/* ============= STATS - REAL SCALE ============= */
 .stats-section {
     background: rgba(10, 20, 35, 0.6);
     border-radius: 12px;
@@ -527,7 +536,6 @@ body::before {
     box-shadow: 0 0 8px rgba(255, 51, 102, 0.6);
 }
 
-/* ============= TOTAL POWER ============= */
 .total-power {
     background: linear-gradient(135deg, rgba(0, 150, 255, 0.2), rgba(0, 100, 200, 0.1));
     border: 2px solid var(--primary);
@@ -554,7 +562,7 @@ body::before {
 
 .power-value {
     color: #fff;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 900;
     text-shadow: 0 0 20px rgba(0, 212, 255, 0.7);
     margin-top: 3px;
@@ -695,7 +703,7 @@ body::before {
     margin-bottom: 5px;
 }
 
-.winner-name { color: #fff; font-size: 28px; font-weight: 900; }
+.winner-name { color: #fff; font-size: 26px; font-weight: 900; }
 .winner-reason { color: #b8c5d6; font-size: 14px; margin-top: 8px; }
 
 .comments-section {
@@ -861,15 +869,15 @@ body::before {
 
 .players-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
 }
 
 .mini-player-card {
     background: rgba(10, 20, 35, 0.6);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 12px;
+    padding: 10px;
     cursor: pointer;
     transition: all 0.3s;
     text-align: center;
@@ -882,29 +890,37 @@ body::before {
 }
 
 .mini-player-avatar {
-    width: 60px; height: 60px;
+    width: 55px; height: 55px;
     border-radius: 50%;
-    margin: 0 auto 8px;
+    margin: 0 auto 6px;
     background: linear-gradient(135deg, #1e3a5f, #2c5282);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 26px;
     border: 2px solid var(--primary);
 }
 
 .mini-player-name {
     color: #fff;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.mini-player-version {
+    color: var(--gold);
+    font-size: 9px;
     font-weight: 700;
     margin-bottom: 3px;
 }
 
 .mini-player-rarity {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 10px;
+    padding: 2px 6px;
+    border-radius: 8px;
     display: inline-block;
 }
 
