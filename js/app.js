@@ -1,11 +1,10 @@
-// ============= INITIALIZATION =============
 let comments = JSON.parse(localStorage.getItem('tsubasa_comments') || '[]');
 
 const defaultComments = [
-    { name: 'عاشق تسوباسا', text: 'تسوباسا ملك اللعبة بدون منازع! مهاراته في التسديد والتمرير لا تُقارن 🔥⚽', time: 'منذ ساعة', likes: 24, liked: false },
-    { name: 'محلل الألعاب', text: 'مقارنة عادلة! هيوغا أقوى في التسديد لكن تسوباسا أكثر تنوعاً في مهاراته.', time: 'منذ 3 ساعات', likes: 18, liked: false },
-    { name: 'Captain Pro', text: 'أنصح باستخدام الاثنين معاً! هيوغا كمهاجم صريح وتسوباسا كصانع ألعاب 🎯', time: 'منذ 5 ساعات', likes: 32, liked: false },
-    { name: 'Tsubasa_Fan', text: 'غينزو واكاباياشي هو أفضل حارس في تاريخ الألعاب! 🧤👑', time: 'منذ يوم', likes: 45, liked: false }
+    { name: 'عاشق تسوباسا', text: 'تسوباسا ملك اللعبة! تسديداته تتجاوز 10K! 🔥⚽', time: 'منذ ساعة', likes: 24, liked: false },
+    { name: 'محلل الألعاب', text: 'هيوغا أقوى في القوة البدنية لكن تسوباسا أكثر توازناً.', time: 'منذ 3 ساعات', likes: 18, liked: false },
+    { name: 'Captain Pro', text: 'الحراس عندهم دفاع فوق 10K يعني ما تقدر تتغدى عليه! 🧤', time: 'منذ 5 ساعات', likes: 32, liked: false },
+    { name: 'Tsubasa_Fan', text: 'غينزو وحش! دفاعه 10345 🔥', time: 'منذ يوم', likes: 45, liked: false }
 ];
 
 if (comments.length === 0) {
@@ -13,7 +12,6 @@ if (comments.length === 0) {
     localStorage.setItem('tsubasa_comments', JSON.stringify(comments));
 }
 
-// انتظر تحميل البيانات
 window.addEventListener('playersLoaded', () => {
     initDropdowns();
     updateAll();
@@ -21,7 +19,6 @@ window.addEventListener('playersLoaded', () => {
     renderPlayersList();
 });
 
-// ============= DROPDOWNS =============
 function initDropdowns() {
     const select1 = document.getElementById('player1Select');
     const select2 = document.getElementById('player2Select');
@@ -38,7 +35,11 @@ function initDropdowns() {
     updateAll();
 }
 
-// ============= RENDER PLAYER CARD =============
+// ============= حساب النسبة المئوية من الحد الأقصى =============
+function calcPercent(value) {
+    return (value / maxStat) * 100;
+}
+
 function renderPlayerCard(playerKey, cardNum) {
     const p = playersData[playerKey];
     if (!p) return;
@@ -67,14 +68,15 @@ function renderPlayerCard(playerKey, cardNum) {
     `;
     
     for (const [key, value] of Object.entries(p.stats)) {
+        const percent = calcPercent(value);
         html += `
             <div class="stat-row">
                 <div class="stat-header">
                     <span class="stat-name">${statEmojis[key]} ${statNames[key]}</span>
-                    <span class="stat-value">${value}</span>
+                    <span class="stat-value">${value.toLocaleString()}</span>
                 </div>
                 <div class="stat-bar">
-                    <div class="stat-fill" style="width: ${value}%"></div>
+                    <div class="stat-fill" data-width="${percent}%" style="width: 0%"></div>
                 </div>
             </div>
         `;
@@ -84,7 +86,7 @@ function renderPlayerCard(playerKey, cardNum) {
         </div>
         <div class="total-power">
             <div class="power-label">القوة الإجمالية</div>
-            <div class="power-value">${totalPower}</div>
+            <div class="power-value">${totalPower.toLocaleString()}</div>
         </div>
         <div class="skills-section">
             <div class="skills-title">🌟 المهارات الخاصة</div>
@@ -108,7 +110,6 @@ function renderStars(rating) {
     return html;
 }
 
-// ============= RADAR CHART =============
 function drawRadarChart() {
     const svg = document.getElementById('radarChart');
     const p1Key = document.getElementById('player1Select').value;
@@ -141,10 +142,11 @@ function drawRadarChart() {
         html += `<text x="${labelX}" y="${labelY + 12}" fill="#8a9bb5" font-size="8" text-anchor="middle" dominant-baseline="middle">${statNames[stat]}</text>`;
     });
     
+    // Player 1 - يستخدم النسبة الحقيقية
     let p1Points = '';
     stats.forEach((stat, i) => {
         const angle = (angleStep * i) - Math.PI / 2;
-        const value = p1.stats[stat] / 100;
+        const value = p1.stats[stat] / maxStat;
         const x = cx + radius * value * Math.cos(angle);
         const y = cy + radius * value * Math.sin(angle);
         p1Points += `${x},${y} `;
@@ -153,16 +155,17 @@ function drawRadarChart() {
     
     stats.forEach((stat, i) => {
         const angle = (angleStep * i) - Math.PI / 2;
-        const value = p1.stats[stat] / 100;
+        const value = p1.stats[stat] / maxStat;
         const x = cx + radius * value * Math.cos(angle);
         const y = cy + radius * value * Math.sin(angle);
         html += `<circle cx="${x}" cy="${y}" r="4" fill="#00d4ff"/>`;
     });
     
+    // Player 2
     let p2Points = '';
     stats.forEach((stat, i) => {
         const angle = (angleStep * i) - Math.PI / 2;
-        const value = p2.stats[stat] / 100;
+        const value = p2.stats[stat] / maxStat;
         const x = cx + radius * value * Math.cos(angle);
         const y = cy + radius * value * Math.sin(angle);
         p2Points += `${x},${y} `;
@@ -171,7 +174,7 @@ function drawRadarChart() {
     
     stats.forEach((stat, i) => {
         const angle = (angleStep * i) - Math.PI / 2;
-        const value = p2.stats[stat] / 100;
+        const value = p2.stats[stat] / maxStat;
         const x = cx + radius * value * Math.cos(angle);
         const y = cy + radius * value * Math.sin(angle);
         html += `<circle cx="${x}" cy="${y}" r="4" fill="#ff3366"/>`;
@@ -182,7 +185,6 @@ function drawRadarChart() {
     document.getElementById('legendName2').textContent = p2.name;
 }
 
-// ============= WINNER =============
 function checkWinner() {
     const p1Key = document.getElementById('player1Select').value;
     const p2Key = document.getElementById('player2Select').value;
@@ -228,7 +230,6 @@ function checkWinner() {
     }
 }
 
-// ============= UPDATE ALL =============
 function updateAll() {
     const p1Key = document.getElementById('player1Select').value;
     const p2Key = document.getElementById('player2Select').value;
@@ -240,16 +241,15 @@ function updateAll() {
     drawRadarChart();
     checkWinner();
     
+    // تأثير حركي للأشرطة
     setTimeout(() => {
         document.querySelectorAll('.stat-fill').forEach(fill => {
-            const w = fill.style.width;
-            fill.style.width = '0%';
-            setTimeout(() => { fill.style.width = w; }, 50);
+            const w = fill.dataset.width;
+            fill.style.width = w;
         });
-    }, 50);
+    }, 100);
 }
 
-// ============= COMMENTS =============
 function renderComments() {
     const list = document.getElementById('commentsList');
     list.innerHTML = comments.map((c, i) => `
@@ -298,7 +298,6 @@ function likeComment(index) {
 
 window.likeComment = likeComment;
 
-// ============= PLAYERS LIST =============
 function renderPlayersList() {
     const grid = document.getElementById('allPlayersGrid');
     const sorted = Object.entries(playersData).sort((a, b) => b[1].rating - a[1].rating);
@@ -366,7 +365,6 @@ function filterPlayers() {
     });
 }
 
-// ============= MODAL =============
 function openPage(pageKey) {
     const page = pagesContent[pageKey];
     if (!page) return;
@@ -386,7 +384,6 @@ window.openPage = openPage;
 window.closeModal = closeModal;
 window.addComment = addComment;
 
-// ============= EVENT LISTENERS =============
 document.getElementById('player1Select').addEventListener('change', updateAll);
 document.getElementById('player2Select').addEventListener('change', updateAll);
 document.getElementById('searchInput').addEventListener('input', filterPlayers);
