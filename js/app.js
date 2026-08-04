@@ -1,10 +1,11 @@
 let comments = JSON.parse(localStorage.getItem('tsubasa_comments') || '[]');
 
 const defaultComments = [
-    { name: 'TsubasaFan', text: 'Tsubasa Dreamfest is the best version! His Drive Tiger Shot is unstoppable! 🔥', time: '1 hour ago', likes: 24, liked: false },
-    { name: 'GameAnalyst', text: 'Hyuga has higher kick power but Tsubasa is more balanced overall. Both are top tier.', time: '3 hours ago', likes: 18, liked: false },
-    { name: 'CaptainPro', text: 'Use both in your team! Hyuga as pure striker, Tsubasa as playmaker 🎯', time: '5 hours ago', likes: 32, liked: false },
-    { name: 'TsubasaLover', text: 'Genzo Dream is the best GK ever! His defense stat is over 10K! 🧤👑', time: '1 day ago', likes: 45, liked: false }
+    { name: 'TsubasaFan', text: 'Tsubasa Dreamfest Super Coach is the BEST version ever! 10,450 kick power! 🔥', time: '1 hour ago', likes: 32, liked: false },
+    { name: 'GameAnalyst', text: 'Genzo SGGK God with 10,550 defense is unbeatable. Perfect wall! 🧤', time: '3 hours ago', likes: 28, liked: false },
+    { name: 'CaptainPro', text: 'Ronaldo Legend Edition with 5 skills is the ultimate striker!', time: '5 hours ago', likes: 45, liked: false },
+    { name: 'TsubasaLover', text: 'Hyuga World Cup is the best pure striker! 10,510 power! 💪', time: '1 day ago', likes: 38, liked: false },
+    { name: 'ProPlayer', text: 'Having 75+ cards means endless team combinations! Love this game!', time: '2 days ago', likes: 52, liked: false }
 ];
 
 if (comments.length === 0) {
@@ -30,8 +31,8 @@ function initDropdowns() {
         select2.add(new Option(`${p.image} ${p.name} - ${p.version}`, key));
     });
     
-    select1.value = 'tsubasa_dream_dc';
-    select2.value = 'hyuga_dream_dc';
+    select1.value = 'tsubasa_dream_sp';
+    select2.value = 'genzo_dream_god';
     updateAll();
 }
 
@@ -53,7 +54,6 @@ function renderPlayerCard(playerKey, cardNum) {
                 <span class="player-rarity rarity-${p.color}">⭐ ${p.rarity}</span>
                 <h2 class="player-name">${p.name}</h2>
                 <p class="player-version">${p.version}</p>
-                <p class="player-jp">${p.jp || ''}</p>
                 <span class="player-position">${p.posLabel}</span>
                 <p class="player-team">${p.team}</p>
             </div>
