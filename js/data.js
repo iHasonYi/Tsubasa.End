@@ -1,11 +1,11 @@
 const statNames = {
-    kick: 'قوة التسديد',
-    dribble: 'المراوغة',
-    speed: 'السرعة',
-    technique: 'التقنية',
-    power: 'القوة البدنية',
-    defense: 'الدفاع',
-    pass: 'التمرير'
+    kick: 'Kick',
+    dribble: 'Dribble',
+    speed: 'Speed',
+    technique: 'Technique',
+    power: 'Power',
+    defense: 'Defense',
+    pass: 'Pass'
 };
 
 const statEmojis = {
@@ -19,13 +19,13 @@ const statEmojis = {
 };
 
 let playersData = {};
-let maxStat = 10500;
+let maxStat = 11000;
 
 fetch('data/players.json')
     .then(res => res.json())
     .then(data => {
         playersData = data.players;
-        maxStat = data.maxStat || 10500;
+        maxStat = data.maxStat || 11000;
         window.dispatchEvent(new Event('playersLoaded'));
     })
-    .catch(err => console.error('خطأ في تحميل البيانات:', err));
+    .catch(err => console.error('Error loading data:', err));
