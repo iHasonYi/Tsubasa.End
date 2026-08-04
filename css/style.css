@@ -1,4 +1,3 @@
-/* ============= RESET & BASE ============= */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +12,7 @@
     --dark: #0a1929;
     --card-bg: rgba(15, 30, 55, 0.95);
     --border: rgba(0, 150, 255, 0.3);
+    --max-stat: 10500;
 }
 
 body {
@@ -26,10 +26,8 @@ body {
 body::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: 
         radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(255, 50, 100, 0.15) 0%, transparent 50%),
@@ -43,7 +41,6 @@ body::before {
     50% { transform: scale(1.1) rotate(5deg); }
 }
 
-/* ============= HEADER ============= */
 .header {
     background: rgba(10, 25, 41, 0.9);
     backdrop-filter: blur(20px);
@@ -104,26 +101,19 @@ body::before {
     cursor: pointer;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: var(--primary);
-}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
 
 .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 2px;
+    bottom: 0; right: 0;
+    width: 0; height: 2px;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     transition: width 0.3s;
 }
 
-.nav-links a:hover::after, .nav-links a.active::after {
-    width: 100%;
-}
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 
-/* ============= CONTAINER ============= */
 .container {
     max-width: 1500px;
     margin: 0 auto;
@@ -159,7 +149,6 @@ body::before {
     font-weight: 500;
 }
 
-/* ============= SEARCH & FILTER ============= */
 .search-filter-bar {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -209,7 +198,6 @@ body::before {
     box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
 }
 
-/* ============= PLAYER SELECTION ============= */
 .player-selection {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -244,11 +232,9 @@ body::before {
 
 .vs-line {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    height: 4px;
+    width: 200px; height: 4px;
     background: linear-gradient(90deg, transparent, var(--secondary), var(--primary), transparent);
     filter: blur(2px);
     z-index: 1;
@@ -263,9 +249,7 @@ body::before {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
-.player-selector.player-2 {
-    border-color: rgba(255, 51, 102, 0.3);
-}
+.player-selector.player-2 { border-color: rgba(255, 51, 102, 0.3); }
 
 .selector-label {
     font-size: 14px;
@@ -277,9 +261,7 @@ body::before {
     color: var(--primary);
 }
 
-.player-selector.player-2 .selector-label {
-    color: var(--secondary);
-}
+.player-selector.player-2 .selector-label { color: var(--secondary); }
 
 .player-dropdown {
     background: rgba(10, 20, 35, 0.8);
@@ -294,7 +276,6 @@ body::before {
     font-weight: 600;
 }
 
-/* ============= MAIN LAYOUT ============= */
 .main-layout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -315,7 +296,6 @@ body::before {
     .nav-links { display: none; }
 }
 
-/* ============= PLAYER CARD ============= */
 .player-card {
     background: var(--card-bg);
     border: 2px solid var(--border);
@@ -336,10 +316,8 @@ body::before {
 .player-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 150px;
+    top: 0; right: 0;
+    width: 100%; height: 150px;
     background: radial-gradient(ellipse at top right, rgba(0, 212, 255, 0.3), transparent);
     pointer-events: none;
 }
@@ -411,8 +389,7 @@ body::before {
 }
 
 .player-image {
-    width: 100px;
-    height: 100px;
+    width: 100px; height: 100px;
     border-radius: 50%;
     background: linear-gradient(135deg, #1e3a5f, #2c5282);
     display: flex;
@@ -434,10 +411,8 @@ body::before {
 .player-image::after {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
     background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
     animation: shine 3s infinite;
 }
@@ -453,7 +428,6 @@ body::before {
     margin-top: 5px;
 }
 
-/* ============= RATING ============= */
 .rating-section {
     background: rgba(10, 20, 35, 0.6);
     border-radius: 12px;
@@ -497,7 +471,7 @@ body::before {
     margin-top: 2px;
 }
 
-/* ============= STATS ============= */
+/* ============= STATS - REAL SCALE ============= */
 .stats-section {
     background: rgba(10, 20, 35, 0.6);
     border-radius: 12px;
@@ -505,26 +479,38 @@ body::before {
     border: 1px solid var(--border);
 }
 
-.stat-row { margin-bottom: 12px; }
+.stat-row { margin-bottom: 14px; }
 .stat-row:last-child { margin-bottom: 0; }
 
 .stat-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
-.stat-name { color: #b8c5d6; font-size: 12px; font-weight: 600; }
-.stat-value { color: var(--primary); font-size: 15px; font-weight: 900; }
+.stat-name {
+    color: #b8c5d6;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.stat-value {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Courier New', monospace;
+}
+
 .player-card.player-2 .stat-value { color: var(--secondary); }
 
 .stat-bar {
-    height: 7px;
-    background: rgba(0, 0, 0, 0.4);
+    height: 8px;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--border);
+    position: relative;
 }
 
 .stat-fill {
@@ -532,12 +518,13 @@ body::before {
     background: linear-gradient(90deg, #00d4ff, #0099ff);
     border-radius: 10px;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+    position: relative;
 }
 
 .player-card.player-2 .stat-fill {
     background: linear-gradient(90deg, #ff3366, #ff6b00);
-    box-shadow: 0 0 10px rgba(255, 51, 102, 0.6);
+    box-shadow: 0 0 8px rgba(255, 51, 102, 0.6);
 }
 
 /* ============= TOTAL POWER ============= */
@@ -545,7 +532,7 @@ body::before {
     background: linear-gradient(135deg, rgba(0, 150, 255, 0.2), rgba(0, 100, 200, 0.1));
     border: 2px solid var(--primary);
     border-radius: 12px;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     margin-top: 12px;
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
@@ -567,17 +554,17 @@ body::before {
 
 .power-value {
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 900;
     text-shadow: 0 0 20px rgba(0, 212, 255, 0.7);
     margin-top: 3px;
+    font-family: 'Courier New', monospace;
 }
 
 .player-card.player-2 .power-value {
     text-shadow: 0 0 20px rgba(255, 51, 102, 0.7);
 }
 
-/* ============= SKILLS ============= */
 .skills-section { margin-top: 12px; }
 
 .skills-title {
@@ -610,7 +597,6 @@ body::before {
 
 .skill-tag:hover { transform: scale(1.05); }
 
-/* ============= RADAR ============= */
 .radar-container {
     background: var(--card-bg);
     border: 2px solid var(--border);
@@ -672,7 +658,6 @@ body::before {
 .legend-color.p1 { background: rgba(0, 212, 255, 0.6); border: 1px solid var(--primary); }
 .legend-color.p2 { background: rgba(255, 51, 102, 0.6); border: 1px solid var(--secondary); }
 
-/* ============= WINNER ============= */
 .winner-section {
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 140, 0, 0.1));
     border: 2px solid var(--gold);
@@ -713,7 +698,6 @@ body::before {
 .winner-name { color: #fff; font-size: 28px; font-weight: 900; }
 .winner-reason { color: #b8c5d6; font-size: 14px; margin-top: 8px; }
 
-/* ============= COMMENTS ============= */
 .comments-section {
     background: var(--card-bg);
     border: 2px solid var(--border);
@@ -819,8 +803,7 @@ body::before {
 }
 
 .comment-avatar {
-    width: 38px;
-    height: 38px;
+    width: 38px; height: 38px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary), #0099ff);
     display: flex;
@@ -858,7 +841,6 @@ body::before {
 .comment-action:hover { color: var(--primary); }
 .comment-action.liked { color: var(--secondary); }
 
-/* ============= PLAYERS LIST ============= */
 .player-list-section {
     background: var(--card-bg);
     border: 2px solid var(--border);
@@ -900,8 +882,7 @@ body::before {
 }
 
 .mini-player-avatar {
-    width: 60px;
-    height: 60px;
+    width: 60px; height: 60px;
     border-radius: 50%;
     margin: 0 auto 8px;
     background: linear-gradient(135deg, #1e3a5f, #2c5282);
@@ -912,7 +893,12 @@ body::before {
     border: 2px solid var(--primary);
 }
 
-.mini-player-name { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+.mini-player-name {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
 
 .mini-player-rarity {
     font-size: 10px;
@@ -922,13 +908,10 @@ body::before {
     display: inline-block;
 }
 
-/* ============= MODAL ============= */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     z-index: 9999;
@@ -967,13 +950,11 @@ body::before {
 
 .modal-close {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 15px; left: 15px;
     background: rgba(255, 51, 102, 0.2);
     border: 2px solid var(--secondary);
     color: var(--secondary);
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
