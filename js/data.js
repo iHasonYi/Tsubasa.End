@@ -1,30 +1,31 @@
-// ============= STATIC DATA =============
 const statNames = {
-    shoot: 'التسديد',
-    accuracy: 'الدقة',
+    kick: 'قوة التسديد',
+    dribble: 'المراوغة',
     speed: 'السرعة',
-    intelligence: 'الذكاء',
-    power: 'القوة',
+    technique: 'التقنية',
+    power: 'القوة البدنية',
     defense: 'الدفاع',
-    passing: 'التمرير'
+    pass: 'التمرير'
 };
 
 const statEmojis = {
-    shoot: '⚡',
-    accuracy: '🎯',
+    kick: '⚡',
+    dribble: '🌊',
     speed: '💨',
-    intelligence: '🧠',
+    technique: '🧠',
     power: '💪',
     defense: '🛡️',
-    passing: '⚙️'
+    pass: '⚙️'
 };
 
-// تحميل اللاعبين من JSON
 let playersData = {};
+let maxStat = 10500;
+
 fetch('data/players.json')
     .then(res => res.json())
     .then(data => {
         playersData = data.players;
+        maxStat = data.maxStat || 10500;
         window.dispatchEvent(new Event('playersLoaded'));
     })
     .catch(err => console.error('خطأ في تحميل البيانات:', err));
