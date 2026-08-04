@@ -19,13 +19,14 @@ const statEmojis = {
 };
 
 let playersData = {};
-let maxStat = 11000;
+let maxStat = 11500;
 
 fetch('data/players.json')
     .then(res => res.json())
     .then(data => {
         playersData = data.players;
-        maxStat = data.maxStat || 11000;
+        maxStat = data.maxStat || 11500;
+        document.getElementById('totalCount').textContent = Object.keys(playersData).length;
         window.dispatchEvent(new Event('playersLoaded'));
     })
     .catch(err => console.error('Error loading data:', err));
